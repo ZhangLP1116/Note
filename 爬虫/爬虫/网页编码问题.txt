@@ -1,0 +1,13 @@
+爬取网页返回请求时一些网站的响应头中不会给出内容的编码标准
+如：	Content-Type：text/html（一般网站）	
+	Content-Type：text/html；charset=utf-8（正规网站）
+	还有一些网站返回头直接缺省Content-Type属性
+
+当响应头中的Content-Type属性没有给出编码标准时用requests请求网站调用text()方法时该方法默认网站用'ISO-8859-1'编码标准所以在打印中文时就会出现乱码。
+此时就要设置响应对象的encoding属性
+如：response.encoding = 'utf-8'
+	此时再调用.text就会按照encoding属性中的值来进行对应的编码
+若响应头中包含网站编码标准时.text也会自动按照响应头中的编码标准进行编码
+不论时.text属性还是.text()方法都受response.encoding属性影响
+
+https://www.cnblogs.com/bw13/p/6549248.html

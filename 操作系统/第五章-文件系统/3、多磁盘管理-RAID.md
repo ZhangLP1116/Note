@@ -1,0 +1,65 @@
+> 多磁盘管理
+>
+> 磁盘物理结构
+>
+> ![image-20210226231926226](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210226231926226.png)
+>
+> 磁盘的逻辑管理
+>
+> 1、一个物理设备划分多个区域，每个区域由一个文件系统单独管理
+>
+> 2、多个物理设备归集到一个分区中，由一个文件系统统一管理
+>
+> ![image-20210226232006405](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210226232006405.png)
+>
+> 一个卷可以拥有多个分区，使得文件系统可以跨越物理设备统一管理磁盘空间。如ubuntu系统中的逻辑卷
+
+> RAID：使用多个低性能容易出错的磁盘，搭建成一个高可靠高性能的磁盘，实现冗余存储，高速访问。
+>
+> ![image-20210226232448732](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210226232448732.png)
+>
+> RAID实现方式
+>
+> 1、软件方式：由操作系统来将实际的物理磁盘抽象成一个逻辑磁盘实现RAID
+>
+> 2、硬件方式：由硬件芯片管理不同的物理磁盘，在操作系统层面看到的就是一个物理磁盘的空间，简化操作系统管理
+
+> RAID提升访问效率原理：交叉存储并行访问（RAID-0可以实现的效果）
+>
+> 案例：下图中操作系统发出访问请求，RAID将被访问的数据分别存储到3个硬盘上，这样3个硬盘就能并行的读取数据提高访问效率。
+>
+> ![image-20210226233012376](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210226233012376.png)
+>
+> RAID实现高可靠性：两个不同硬盘存储一样的数据（RAID-1实现的效果，但没有RIAD-0的效果）
+>
+> ![image-20210226233436232](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210226233436232.png)
+>
+> RAID-4：既拥有高可靠性又有高访问速度
+>
+> disk1~4交叉存储实现并行访问，parity disk实现纠错功能，任意一个盘损坏可以使用这个盘的信息恢复
+>
+> 缺点：频繁的Parity disk的读写操作使得Parity disk的性能成为这个系统的瓶颈
+>
+> ![image-20210226233643927](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210226233643927.png)
+>
+> RAID-5：通过将Parity disk的读写均匀分配到其他磁盘解决瓶颈问题。
+>
+> 让奇偶校验块分配到各各硬盘中使得每个盘的开销均匀。
+>
+> （到此为止RAID只能同时恢复一个损坏磁盘的信息，若同时损坏两个盘修需要后续技术支持）
+>
+> ![image-20210226234103101](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210226234103101.png)
+>
+> 一般奇偶校验使用一个块为单位进行
+>
+> 早期由使用bit来进行奇偶校验的RIAD，如3，不大实用
+>
+> ![image-20210226234359850](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210226234359850.png)
+>
+> 发展
+>
+> ![image-20210226234504444](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210226234504444.png)
+
+> 特定组合实现复合功能
+>
+> ![image-20210226234532431](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210226234532431.png)

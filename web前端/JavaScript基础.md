@@ -1,0 +1,201 @@
+**1、什么是javascript，作用是什么**
+
+> javascript是一个脚本语言，被使用在前端，因为是一个健全的计算机语言，具有变量表达式等元素，所以可以实现一部分脱离后端的网页动态效果。javascript通常被用来经验前端提交的数据正确性保证发往后台的数据都是可以被正确处理的，以减小后端负担；javascript还可以用来动态渲染网页，后端响应请求时可以将响应的内容写在javascript，有客户端的浏览器取响应生成html内容；javasrcipt还可以与xml技术结合使用，实现异步的页面请求，也就是AJAX。
+
+**2、javascript该怎么被网页使用**
+
+> javascript程序代码被使用时需要放置在\<script>标签中，标签根据放置位置的不同，使用的方法也不同。
+>
+> 1、\<script>放置在head标记中
+> 		一般将不直接使用的javascript代码定义成函数写在script标签中，放置在head标签里，等待被调用，才执		行。
+>
+> 2、\<script>放置在body中
+> 		一般将需要在页面加载时就执行的javascript代码，会直接将程序写在script标签中，放置在body标签例，这		时候的javascript代码一般不会定义成函数，这类程序一般会生成一些网页展示需要的内容，在浏览器生成页		面时一起执行。
+>
+> 3、外部js文件中
+> 		和css一样，javascript也可以独立的写在一个文件中，在通过script标签的src属性去调用。
+>
+> ```html
+> <script type='text/javascript' src='demo.js'></script>
+> ```
+>
+> 4、直接放置在事件处理的代码中
+> 		因为时间属性的特殊性，其属性值可以直接是一段javascript代码，也可以是一个句柄。所以可以直接将		javascript代码写在事件属性后。
+>
+> ```html
+> <!-- 直接在onclick事件属性的后面写上javascript，不常用，一般都是放置函数句柄 -->
+> <input type='button' onclick='alert('Tip')' />
+> ```
+>
+> 
+
+**3、javascript基础**
+
+> **0、语句块和语句**，语句是单条javascript语句，语句块是用花括号包围的多条javascript表示该内容要么一起执行		要么都不执行
+>
+> **1、数据类型**
+>
+> > 1、String字符型：用双引号或者单引号标记起来的数据
+> >
+> > 2、Number数值型：包括整形、浮点型、内部常量、特殊值
+> >
+> > 内部常量：
+> >
+> > ![image-20201017101526423](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017101526423.png)
+> >
+> > 特殊值:
+> >
+> > ![image-20201017101826917](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017101826917.png)
+> >
+> > ![image-20201017101725312](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017101725312.png)
+> >
+> > 3、boolean布尔型：是一种变量值只有True或False两种值的变量。
+> >
+> > 4、Null型：表示无值，该属性只有null一个值。一般在初始化变量时给一些字符变量或者整形变量赋值null表示改变了还未被使用。
+> >
+> > 5、Undefined型：该类型表示变量在定义后还没有被赋值的状态，null不属于该状态。
+> >
+> > 6、Object对象类型：对象类型
+>
+> **2、变量的定义**：var 变量名[=初始值 [,变量名 [=初始值] ] ]
+>
+> **3、运算符**
+>
+> > 1、算术运算符：+、-、*、/、%、++、--、
+> >
+> > ```javascript
+> > // + 运算符两边数据类型不同时，会起字符串连接的作用
+> > // - 运算符两边数据类型不同时，会将数据转换为数值型进行运算
+> > // * 运算符两边数据类型不同时，会将数据转换为数值型进行运算若无法转换则结果为NaN
+> > // / 运算符两边数据类型不同时，会将数据转换为数值型进行运算若无法转换则结果为NaN
+> > // % 运算符两边数据类型不同时，会将数据转换为数值型进行运算若无法转换则结果为NaN
+> > // ++ 自增与c语言一致
+> > // -- 自减与c语言一致
+> > ```
+> >
+> > 2、关系运算符：
+> >
+> > ```javascript
+> > // == ,比较时会先判断两边数据类型是否相同，若相同则直接进行比较；若不同又有以下情况时则先进行类型转换在比较。类型转换的规则是：1、如果操作数中有数值型又有字符串则将字符串转换为数值型。2、如果操作数中有布尔型则将True是为1，false是为0进行比较。3、如果操作数是一个对象，一个是字符串或数值，则把对象转换成其中一种类型进行比较。；若无以上情况时，只有在两个变量引用同一个对象时才是相同的，负责都是不同的。；特殊值比较时：1、NaN不同于NaN，2、null等于undefind、3、null、undefind都与自身相等。
+> > // !=
+> > // < ，比较原则是，任何数据都只能在字符和数字之间进行比较，不是这两个类型的将被转换成这两个类型进行比较，若不能转换则结果为false，优先转换为数值型。
+> > // >
+> > // <=
+> > // >=
+> > // ==== ， 比较原则是，不进行类型转换，只有类型和数值全部相同时才为真
+> > // !==
+> > ```
+> >
+> > 3、逻辑运算符：
+> >
+> > ```javascript
+> > // ！,非
+> > // &&，与
+> > // ||，或
+> > ```
+> >
+> > 4、位运算符：
+> >
+> > ```javascript
+> > // &，按位与
+> > // |，按位或
+> > // ~，按位非
+> > // ^，按位异或
+> > ```
+> >
+> > 5、其他运算符：
+> >
+> > ```javascript
+> > // 问号表达式  a>b?a:b，与c语言一致
+> > // , 逗号运算符先计算第一个表达式，在计算第二个表达式，结果为第二个表达式
+> > // new  新建对象运算符  var a = new Array
+> > // delete 删除运算符  删除一个对象的属性或者某个数值的元素
+> > // typeof  类型判断运算符，typeof(a)
+> > ```
+> >
+> > 
+>
+> **4、程序结构控制**
+>
+> > 1、顺序：程序顺序执行
+> >
+> > 2、分支：程序选择性执行
+> >
+> > ```javascript
+> > // 格式与C语言一致
+> > // if ...else
+> > if(a>b) {语句块}或语句
+> > else {语句块}或语句
+> > // if ...else if... else
+> > if(表达式) {语句块}或语句
+> > else if(表达式){语句块}或语句
+> > else {语句块}或语句
+> > ```
+> >
+> > 3、循环：程序循环执行
+> >
+> > ```javascript
+> > // for 循环
+> > for(i=0;i<=max;i++){语句块}或语句
+> > // for in循环
+> > for(variable in object){语句块}或语句
+> > 例:
+> > for(propert in screen){
+> >     // 遍历对象相当于在遍历一个字典，每次循环都会获取其中的键也就是属性名，再用属性名去获取属性值，这里的screen是windows对象下screen对象，保存客户端屏幕信息。
+> >     document.write(propert  + '-' + screen[propert])
+> > }
+> > 
+> > 
+> > // while 循环
+> > while(表达式){语句块}或语句
+> > // do while循环
+> > do {语句块}或语句 while(表达式)
+> > ```
+> >
+> > 
+>
+> **5、自定义函数**
+>
+> ```javascript
+> // function name([参数]){函数体}
+> function $(id){return document.getElementById(id);}
+> ```
+>
+> 
+
+**4、javascript对象**
+
+> **1、本地对象**：本地对象是独立于ECMAScript实现提供的对象，包括：Object、Function、Array、String、Boolean
+>
+> ![image-20201018123359086](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018123359086.png)
+>
+> ![image-20201018123415439](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018123415439.png)
+>
+> ![image-20201018123432647](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018123432647.png)
+>
+> 
+>
+> **2、宿主对象**：由浏览器环境提供的对象。BOM、DMO。
+>
+> **3、内置对象**：由ECMAScript实现并且已经实例化的对象，Global、Math
+>
+> ![image-20201018122528413](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018122528413.png)
+>
+> ![image-20201018122545746](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018122545746.png)
+>
+> ![image-20201018122711724](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018122711724.png)
+>
+> ![image-20201018122732704](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018122732704.png)
+>
+> ```javascript
+> // Global对象的方法
+> eval()// 将参数当作脚本代码来运行
+> isNaN()// 判断参数是否为NaN，非数值型
+> isFinite()// 判断参数是否为Finite无穷大
+> parseInt()// 将参数转换成整形
+> parseFloat()// 将参数转换成浮点型，同头开始解析，将能转换的部分转换，若一开始旧无法转换则返回NaN
+> escape()// 将参数转换成URL编码
+> unescape()// 将URL编码的参数转换成正常编码
+> ```
+>
+> **4、自定义对象**：用户自定义的对象
