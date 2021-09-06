@@ -241,7 +241,7 @@
 >
 > ```xml
 > <ContextdocBase="JavaWebExample" path="/JavaWebExample" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebExample">
->     <Resourceauth="Container" typr='javax.sql.DataSource' usrl="jdbc:mysql://localhost:3306/user?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnection=true" usename="root" password="root" logAbandoned="true" maxActive="100" maxIdle="50" minIdle="10" maxWait="10000" removeAbandoned="true" removeAbandonedTime="30" testOnResult="true" testWhileIdle="true" validationQuery="select now()" />
+>     <Resourceauth="Container" type='javax.sql.DataSource' usrl="jdbc:mysql://localhost:3306/user?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnection=true" usename="root" password="root" logAbandoned="true" maxActive="100" maxIdle="50" minIdle="10" maxWait="10000" removeAbandoned="true" removeAbandonedTime="30" testOnResult="true" testWhileIdle="true" validationQuery="select now()" />
 > </Context>
 > ```
 >
