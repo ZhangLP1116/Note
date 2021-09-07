@@ -83,7 +83,7 @@
 >
 > （这里的Bob相当于一个服务器，它支持各种加密算法和解压算法）
 >
-> ![image-20210416150519301](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210416150519301.png)
+> ![image-20210416150519301](image\image-20210416150519301.png)
 >
 > ​			**使用安全连接：**
 >
@@ -97,7 +97,7 @@
 >
 > ​				5、加上一个分段头，不同端将在接收方的SSL层重组，交给TCP进行传输
 >
-> ![image-20210416151638548](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20210416151638548.png)
+> ![image-20210416151638548](image\image-20210416151638548.png)
 >
 > ​		SSL支持多种密码学算法，最强的一种是使用三重DES来加密数（使用3个独立的密钥），通过SHA-1保护数据完整性。一般情况使用128为的密钥进行RC4（对称密钥算法）算法进行加密，通过MD5进行验证。
 >

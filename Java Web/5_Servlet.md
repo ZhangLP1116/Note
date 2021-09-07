@@ -3,12 +3,12 @@
 > **单JSP的Java Web后台工作流程**
 > 	这个时候一个JSP页面中混杂了html代码，数据库连接代码，Java代码。程序结构比较混乱，代码复用率低，模块分工不明显。
 >
-> ![](image/JSP.webp)
+> ![](image\JSP.webp)
 >
 > **JSP + Java Bean的后台工作流程**
 > 	引入JavaBean后，代码的复用率得到了极大的提高，数据库模块得到解耦，数据库连接被单独的写成一个模块负责与数据库的交互，JSP负责处理请求和页面的展示。
 >
-> ![](image/Java_Bean.webp)
+> ![](image\Java_Bean.webp)
 >
 > **Servlet + JSP + Bean的后台工作流程**
 > 	引入Servlet后将JSP负责的处理请求和展示页面的功能分开，Servlet负责处理客户端请求，JSP负责响应页面，进一步对程序进行解耦，使得后台程序分工明了，故障排除效率提高。当JSP中依然混杂着大量的Java代码和HTML代码。
@@ -16,7 +16,7 @@
 > ​	试想起初为了实现网页的动态交互就必须要有一种，响应请求式的后台程序和可以动态展示内容的页面去实现。那么在Servlet+JSP+Bean模式下，Java程序很好的实现了对请求的响应和处理，对特定的用户产生特定的输出，而JSP页面用来承载和展示这种动态变化的输出结果。
 > ​	正因为JSP的这种特点，导致了后台程序与前端展示联系的过于紧密，每当前端需要有所变动时
 >
-> ![](image/Java_servlet.jpg)
+> ![](image\Java_servlet.jpg)
 
 **1、Servlet概述**
 
@@ -67,14 +67,14 @@
 > 	1、客户端发送请求到服务器
 > 	2、Web服务器将请求信息发送给对应Servlet引擎，Servlet引擎在把请求发送给对应Servlet
 > 	3、Servlet引擎将Servlet生成响应并返回给Web服务器，再有Web服务器放回给客户端
-> ![](image/Servlet工作过程.jpg)
+> ![](image\Servlet工作过程.jpg)
 >
 > **Servlet生命周期**
 > 	1、Servlet初始化，Servlet第一次被请求时加载，即服务器上的Servlet引擎将对应的.Java文件编译成.Class文件，然后创建一个Servlet对象，在调用Servlet对象的init()方法初始化对象。
 > 	当Servlet对象第一次被创建后就会被保存在服务器内存中，一下次再有请求访问该对象时服务器就会直接从内存中读取，不用再次编译，响应速度会比第一次快许多。
 > 	2、运行service()方法响应对应的请求，service()方法会根据请求的类型调用doGet()或者doGet()方法
 > 	3、销毁Servlet，当Web应用被终止时Servlet会先调用Servlet对象的destroy()方法销毁Servlet对象，释放资源
-> 	由此可见，在一个Servlet生命周期中初始化和销毁都只执行一次，service()方法执行此处根据客户端请求而定![](image/Servlet生命周期.jpg)
+> 	由此可见，在一个Servlet生命周期中初始化和销毁都只执行一次，service()方法执行此处根据客户端请求而定![](image\Servlet生命周期.jpg)
 >
 > **Servlet接口**
 > 	Servlet API为客户端和服务器之间的请求和应答定义了标准接口

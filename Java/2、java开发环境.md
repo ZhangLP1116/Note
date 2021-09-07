@@ -8,7 +8,7 @@
 >
 > ​		JRE（Java Runtime Environment，java运行环境），顾名思义JRE是java程序运行时需要的环境，与JDK相比JRE体量更小，没有JDK中编写Java程序所需要的组件。所以运行一个Java程序只需要安装JRE组件即可，若要编写Java程序就需要JDK
 
-> ![image-20210622112701695](image/image-20210622112701695.png)
+> ![image-20210622112701695](image\image-20210622112701695.png)
 
 > JAR
 >

@@ -190,7 +190,7 @@
 > >
 > > 在表单发送特殊格式的数据时已修改该变量，如文件格式数据时要设置成"enctype='multipart/form-data' "。
 > >
-> > ![image-20201201164352955](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201201164352955.png)
+> > ![image-20201201164352955](image\image-20201201164352955.png)
 >
 > 按钮标签：\<input>\</input>
 >

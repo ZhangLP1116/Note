@@ -6,27 +6,27 @@
 >
 > **1、鼠标事件**
 >
-> ![image-20201017114900563](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017114900563.png)
+> ![image-20201017114900563](image\image-20201017114900563.png)
 >
 > **2、键盘事件**
 >
-> ![image-20201017114917057](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017114917057.png)
+> ![image-20201017114917057](image\image-20201017114917057.png)
 >
 > **3、HTML事件：html中的元素触发的一些事件**
 >
-> ![image-20201017115121343](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017115121343.png)
+> ![image-20201017115121343](image\image-20201017115121343.png)
 >
-> ![image-20201017114959312](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017114959312.png)
+> ![image-20201017114959312](image\image-20201017114959312.png)
 >
-> ![image-20201017115205490](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017115205490.png)
+> ![image-20201017115205490](image\image-20201017115205490.png)
 >
-> ![image-20201017115230550](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017115230550.png)
+> ![image-20201017115230550](image\image-20201017115230550.png)
 >
-> ![image-20201017115547221](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017115547221.png)
+> ![image-20201017115547221](image\image-20201017115547221.png)
 >
-> ![image-20201017115632354](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017115632354.png)
+> ![image-20201017115632354](image\image-20201017115632354.png)
 >
-> ![image-20201017115655243](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017115655243.png)
+> ![image-20201017115655243](image\image-20201017115655243.png)
 >
 > 
 >
@@ -34,9 +34,9 @@
 >
 > **5、其他事件**
 >
-> ![image-20201017115245974](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017115245974.png)
+> ![image-20201017115245974](image\image-20201017115245974.png)
 >
-> ![image-20201017115736529](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017115736529.png)
+> ![image-20201017115736529](image\image-20201017115736529.png)
 >
 > **6、事件处理：**当事件触发时，如果需要执行特定程序就需要为该事件的事件句柄指定特定的程序。一般有以下方法。事件句柄原则上以on+事件名的形式
 >
@@ -75,7 +75,7 @@
 
 > javascript与html节点的操作主要时通过操作DOM和BOM两个模型去实现，事件也是属于DOM模型中的一个对象，每一个对象都有着自身的属性和方法。
 >
-> ![image-20201018103955710](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018103955710.png)
+> ![image-20201018103955710](image\image-20201018103955710.png)
 >
 > **1、DOM：（Document Object Model，文档对象模型）**
 >
@@ -83,9 +83,9 @@
 > >
 > > **1、DOM节点树：**HTML中的所有内容都树形结构保存在DOM中，DOM中的每一个成分都是节点，节点树种有三种类型的节点：元素节点、属性节点、文本节点。其中该元素的元素节点和属性节点互为兄弟节点，文本节点则为元素节点的子节点。
 > >
-> > ![image-20201017124656658](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017124656658.png)
+> > ![image-20201017124656658](image\image-20201017124656658.png)
 > >
-> > ![image-20201017124817563](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017124817563.png)
+> > ![image-20201017124817563](image\image-20201017124817563.png)
 > >
 > > **2、节点对象访问**
 > >
@@ -175,17 +175,17 @@
 >
 > >BOM定义了浏览器对象的组织形式和相互关系，描述了浏览器对象的层次结构是WEB页面中内置对象的组织形式：**BOM的对象包括windows、document、history、location、navigator、screen、frame**，其结构关系如下
 > >
-> >![image-20201018110034844](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018110034844.png)
+> >![image-20201018110034844](image\image-20201018110034844.png)
 > >
 > >**1、window对象**
 > >
-> >![image-20201018110314844](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018110314844.png)
+> >![image-20201018110314844](image\image-20201018110314844.png)
 > >
-> >![image-20201018110338500](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018110338500.png)
+> >![image-20201018110338500](image\image-20201018110338500.png)
 > >
-> >![image-20201018110408115](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018110408115.png)
+> >![image-20201018110408115](image\image-20201018110408115.png)
 > >
-> >![image-20201018110425512](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018110425512.png)
+> >![image-20201018110425512](image\image-20201018110425512.png)
 > >
 > >```javascript
 > >// window对象的常用方法
@@ -217,7 +217,7 @@
 > >**2、navigator对象**
 > >		该对象保存客户端浏览器本身的一些信息，如版本、浏览器名称、客户机的操作系统等
 > >
-> >![image-20201018113339885](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018113339885.png)
+> >![image-20201018113339885](image\image-20201018113339885.png)
 > >
 > >```javascript
 > >document.write(navigator.appName)
@@ -226,7 +226,7 @@
 > >**3、screen对象**
 > >		该对象保存着客户机屏幕信息。
 > >
-> >![image-20201018113843089](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018113843089.png)
+> >![image-20201018113843089](image\image-20201018113843089.png)
 > >
 > >```javascript
 > >document.write('屏幕可用高度：' + screen.avaiHeight);
@@ -235,7 +235,7 @@
 > >**4、history对象**
 > >		该对象表示窗口的浏览历史，有window的history属性引用该窗口的history对象。history对象是一个		数组，其中的元素存储了浏览历史中的全部url，所以可以通过引用该对象获取浏览历史中的某个		URL
 > >
-> >![image-20201018114533111](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018114533111.png)
+> >![image-20201018114533111](image\image-20201018114533111.png)
 > >
 > >```javascript
 > >window.history.back()// 加载上一个页面
@@ -247,7 +247,7 @@
 > >**5、location对象**
 > >		该对象用来表示浏览器当前加载的文档URL。该对象的属性说明了URL中的各个部分
 > >
-> >![image-20201018115116810](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018115116810.png)
+> >![image-20201018115116810](image\image-20201018115116810.png)
 > >
 > >```javascript
 > >document.write(location.href);

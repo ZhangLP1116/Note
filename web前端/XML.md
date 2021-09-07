@@ -2,9 +2,9 @@
 
 > XML：可扩展标记语言（EXtensible Markup Language）
 >
-> ![image-20201122125405534](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201122125405534.png)
+> ![image-20201122125405534](image\image-20201122125405534.png)
 >
-> ![image-20201122125510517](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201122125510517.png)
+> ![image-20201122125510517](image\image-20201122125510517.png)
 
 2、XML作用
 
@@ -105,11 +105,11 @@
 > DOM解析与SAX解析的区别
 > DOM
 >
-> ![image-20201122135007929](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201122135007929.png)
+> ![image-20201122135007929](image\image-20201122135007929.png)
 >
 > SAX
 >
-> ![image-20201122135026769](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201122135026769.png)
+> ![image-20201122135026769](image\image-20201122135026769.png)
 
 5、XML内容提取
 

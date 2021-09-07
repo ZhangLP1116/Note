@@ -192,7 +192,7 @@ CSS：层叠样式表
 > 参数取值如下图
 > ```
 >
-> ![image-20201008151404813](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201008151404813.png)
+> ![image-20201008151404813](image\image-20201008151404813.png)
 
 列表样式
 

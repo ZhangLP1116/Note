@@ -1,4 +1,4 @@
-> ![image-20210808135527110](image/image-20210808135527110.png)
+> ![image-20210808135527110](image\image-20210808135527110.png)
 
 > ## 线程创建
 >
@@ -101,11 +101,11 @@
 >
 > 需要获取返回值的情况应该使用Callable接口
 >
-> ![image-20210808155212685](image/image-20210808155212685.png)
+> ![image-20210808155212685](image\image-20210808155212685.png)
 
 > ## Thread、Runable、Futrue、FutrueTask、Callable关系
 >
-> ![image-20210808154307728](image/image-20210808154307728.png)
+> ![image-20210808154307728](image\image-20210808154307728.png)
 >
 > #### Thread类
 >
@@ -115,17 +115,17 @@
 >
 > ​		用于获取线程的返回值
 >
-> ![image-20210808160920698](image/image-20210808160920698.png)
+> ![image-20210808160920698](image\image-20210808160920698.png)
 >
 > #### FutrueTask类
 >
-> ![image-20210808161314277](image/image-20210808161314277.png)
+> ![image-20210808161314277](image\image-20210808161314277.png)
 >
-> ![image-20210808161249813](image/image-20210808161249813.png)
+> ![image-20210808161249813](image\image-20210808161249813.png)
 >
 > ​	FutrueTask构造方法，可以接收Callable或Runnable
 >
-> ![image-20210808161504971](image/image-20210808161504971.png)
+> ![image-20210808161504971](image\image-20210808161504971.png)
 >
 > #### FutrueTask与Futrue
 >
@@ -173,7 +173,7 @@
 
 > ## Thread主要方法
 >
-> ![image-20210808165503600](image/image-20210808165503600.png)
+> ![image-20210808165503600](image\image-20210808165503600.png)
 >
-> ![image-20210808165516698](image/image-20210808165516698.png)
+> ![image-20210808165516698](image\image-20210808165516698.png)
 

@@ -41,13 +41,13 @@
 > >
 > > 内部常量：
 > >
-> > ![image-20201017101526423](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017101526423.png)
+> > ![image-20201017101526423](image\image-20201017101526423.png)
 > >
 > > 特殊值:
 > >
-> > ![image-20201017101826917](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017101826917.png)
+> > ![image-20201017101826917](image\image-20201017101826917.png)
 > >
-> > ![image-20201017101725312](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201017101725312.png)
+> > ![image-20201017101725312](image\image-20201017101725312.png)
 > >
 > > 3、boolean布尔型：是一种变量值只有True或False两种值的变量。
 > >
@@ -167,11 +167,11 @@
 
 > **1、本地对象**：本地对象是独立于ECMAScript实现提供的对象，包括：Object、Function、Array、String、Boolean
 >
-> ![image-20201018123359086](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018123359086.png)
+> ![image-20201018123359086](image\image-20201018123359086.png)
 >
-> ![image-20201018123415439](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018123415439.png)
+> ![image-20201018123415439](image\image-20201018123415439.png)
 >
-> ![image-20201018123432647](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018123432647.png)
+> ![image-20201018123432647](image\image-20201018123432647.png)
 >
 > 
 >
@@ -179,13 +179,13 @@
 >
 > **3、内置对象**：由ECMAScript实现并且已经实例化的对象，Global、Math
 >
-> ![image-20201018122528413](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018122528413.png)
+> ![image-20201018122528413](image\image-20201018122528413.png)
 >
-> ![image-20201018122545746](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018122545746.png)
+> ![image-20201018122545746](image\image-20201018122545746.png)
 >
-> ![image-20201018122711724](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018122711724.png)
+> ![image-20201018122711724](image\image-20201018122711724.png)
 >
-> ![image-20201018122732704](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201018122732704.png)
+> ![image-20201018122732704](image\image-20201018122732704.png)
 >
 > ```javascript
 > // Global对象的方法

@@ -99,9 +99,9 @@ XML组成成分
 > <payment type="cash" />
 > ```
 >
-> ![image-20201122144212939](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201122144212939.png)
+> ![image-20201122144212939](image\image-20201122144212939.png)
 >
-> ![image-20201122144251887](C:\Users\zhang\AppData\Roaming\Typora\typora-user-images\image-20201122144251887.png)
+> ![image-20201122144251887](image\image-20201122144251887.png)
 
 实体
 
