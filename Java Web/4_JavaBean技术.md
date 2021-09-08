@@ -118,7 +118,7 @@
 >     public Connection ConnDB(){
 > 		conn = null;        
 >         try{
->             String url = 'jdbc:mtsql://localhost:3306/test?userUnicode=true&character=UTF-8';
+>             String url = 'jdbc:mysql://localhost:3306/test?userUnicode=true&character=UTF-8';
 >             Class.forNmae("com.mysql.jdbc.Driver").newInstance();
 >             conn = DriverManager.getConnection(url, "hncst", "123");
 >             return conn;
@@ -133,9 +133,9 @@
 >     public Statement createStat(){
 >         st = null;
 >         try{
->         if (conn == null){
->             conn = this.ConnDB();
->         }
+>             if (conn == null){
+>                 conn = this.ConnDB();
+>             }
 >             st = conn.CreateStatement();
 >             return st;
 >         }
@@ -241,7 +241,7 @@
 >
 > ```xml
 > <ContextdocBase="JavaWebExample" path="/JavaWebExample" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebExample">
->     <Resourceauth="Container" type='javax.sql.DataSource' usrl="jdbc:mysql://localhost:3306/user?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnection=true" usename="root" password="root" logAbandoned="true" maxActive="100" maxIdle="50" minIdle="10" maxWait="10000" removeAbandoned="true" removeAbandonedTime="30" testOnResult="true" testWhileIdle="true" validationQuery="select now()" />
+>     <Resourceauth="Container" typr='javax.sql.DataSource' usrl="jdbc:mysql://localhost:3306/user?useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnection=true" usename="root" password="root" logAbandoned="true" maxActive="100" maxIdle="50" minIdle="10" maxWait="10000" removeAbandoned="true" removeAbandonedTime="30" testOnResult="true" testWhileIdle="true" validationQuery="select now()" />
 > </Context>
 > ```
 >
