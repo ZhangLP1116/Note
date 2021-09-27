@@ -477,7 +477,7 @@
 
 > 1、静态资源必须被打包
 >
-> 2、开启默认servlet对静态支援请求进行处理，DispatcherServlet前端控制器没有对静态支援请求进行处理
+> 2、开启默认servlet对静态资源请求进行处理，DispatcherServlet前端控制器没有对静态支援请求进行处理
 >
 > （默认的servlet在Tomcat的web.xml配置，项目中的web.xml中与Tomcat的web.xml相同的配置会被项目中的web.xml覆盖，`与css特性类似最靠近的生效`）
 
