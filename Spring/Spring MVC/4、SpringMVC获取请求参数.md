@@ -68,7 +68,19 @@
 >
 > @CookieValue注解一共有三个属性：value、required、defaultValue，用法同@RequestParam
 
-#### 6、通过POJO获取
+#### 6、@RequestBody注解获取
+
+> @RequestBody注解获取获取POST请求体中的参数信息
+>
+> @RequestBody注解只有一个required属性默认为true
+
+#### 7、@RequestAttribute注解
+
+> @RequestAttribute获取请求域中的值，有value、required属性
+>
+> ![image-20211004135814221](image/image-20211004135814221.png)
+
+#### 8、通过POJO获取
 
 > 控制方法中设置实体类（bean），将请求参数封装到实体类中（bean）
 >
@@ -159,7 +171,7 @@
 > }
 > ```
 
-#### 7、设置过滤器处理中文乱码
+#### 9、设置过滤器处理中文乱码
 
 > 解决获取请求参数的乱码问题，可以使用SpringMVC提供的编码过滤器CharacterEncodingFilter，但是必须在web.xml中进行注册
 >
