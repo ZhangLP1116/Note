@@ -56,6 +56,16 @@
 >
 >    ![image-20210914180140547](image/image-20210914180140547.png)
 
+> 插入数据获取自增主键到实体类
+>
+> ```xml
+> <insert id="insert" parameterType="article" useGeneratedKeys="true" keyProperty="id">
+> ```
+>
+> useGeneratedKeys：表示存在自增主键
+>
+> keyProperty：自增主键名，根据这个字段名获取值
+
 #### 查询
 
 > 参考上个案例
