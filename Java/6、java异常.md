@@ -1,5 +1,5 @@
-> 异常
->
+### 异常
+
 > 静态语言的异常发现有两中场景
 >
 > 1、编译时发现的错误：这时发现的一般时语法错误
@@ -14,7 +14,9 @@
 >
 > ![image-20210624111017472](image\image-20210624111017472.png)
 
-> Exception：有两个子类RunTimeException和CheckedException异常
+### Exception
+
+> 有两个子类RunTimeException和CheckedException异常
 >
 > RunTimeException子类
 >
@@ -24,7 +26,9 @@
 >
 > ![image-20210624111255896](image\image-20210624111255896.png)
 
-> throws和throw关键字：java内异常也是一种类的对象
+### throws和throw关键字
+
+> java内异常也是一种类的对象
 >
 > throw：用在方法体内，抛出异常实例，有方法体内的语句处理
 >
@@ -32,16 +36,16 @@
 >
 > ![image-20210624111407086](image\image-20210624111407086.png)
 
-> try、catch、finally
->
+### try、catch、finally
+
 > try：关键字后的代码块表示可能发生异常的代码
 >
 > catch：关键字后的代码块表示捕捉到异常后的处理
 >
 > finally：关键字后的代码块表示一定会被执行的代码
 
-> ERROR
->
+### ERROR
+
 > error是程序无法处理的错误，表示运行程序中出现了严重的问题。大多数错误和代码编写者执行的操作无关，而表示代码运行时JVM出现的问题。这些错误往往是不可检查的，不被运行发生的。
 >
 > 如OutOfMemoryError、StackOverflowError

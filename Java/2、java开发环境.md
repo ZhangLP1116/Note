@@ -1,17 +1,17 @@
-> JDK
->
+### JDK
+
 > ​		JDK（Java Development Kit）Java开发包，**是**编写Java小程序和应用程序的**开发环境**，它包含java运行环境（Java Runtime Environment），java根据，Java核心库类。
 >
 > （相对的SDK，software Development Kit软件开发工具包，就是一类用于软件编写的开发环境）
 
-> JRE
->
+### JRE
+
 > ​		JRE（Java Runtime Environment，java运行环境），顾名思义JRE是java程序运行时需要的环境，与JDK相比JRE体量更小，没有JDK中编写Java程序所需要的组件。所以运行一个Java程序只需要安装JRE组件即可，若要编写Java程序就需要JDK
 
 > ![image-20210622112701695](image\image-20210622112701695.png)
 
-> JAR
->
+### JAR
+
 > ​		JAR（java Archive，java归档），是一种软件包文件格式，通常将实现一种功能的大量java类文件，相关源数据，资源（图片、文本）通过ZIP格式归档到一个文件包中。
 >
 > ​		JAR文件经常用于部署、封装库、组件和插件程序 。**可以被编译器和JVM等程序直接使用而不需要先提取JAR中的文件。**
