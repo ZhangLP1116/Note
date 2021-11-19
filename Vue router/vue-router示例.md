@@ -195,6 +195,32 @@ const router = new Router({
 - 使用通配符匹配
 - 使用正则表达式匹配
 
+示例
+
+```js
+const router = new VueRouter({
+  mode: 'history',
+  base: __dirname,
+  routes: [
+    { path: '/' },
+    // 使用冒号添加路径参数
+    { path: '/params/:foo/:bar' },
+      // 添加问号值得路径参数可选
+    // a param can be made optional by adding "?"
+    { path: '/optional-params/:foo?' },
+    // 路径参数后可以跟正则表达式
+    // 下面路由表示路径参数只匹配数值类型
+    { path: '/params-with-regex/:id(\\d+)' },
+    // 使用通配符匹配任意
+    { path: '/asterisk/*' },
+    // 使用括号和问号配合使得部分路径可选
+    { path: '/optional-group/(foo/)?bar' }
+  ]
+})
+```
+
+
+
 #### 路由匹配优先级
 
 若有多个匹配的路由项则按照定义的顺序，定义的越早优先级越高
