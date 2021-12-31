@@ -168,7 +168,7 @@ public class JWTUtils {
                 .parse(token)
             // 获取载荷部分，可以强制转换成map类型
             // Claims类型继承了map，内置了一些获取公共声明字段的方法
-            // 获取私有声明时室友map.get(key)，的形式获取
+            // 获取私有声明时使用map.get(key)，的形式获取
                 .getBody();
         System.out.println(body.getIssuer());
         System.out.println(body.getIssuedAt());
