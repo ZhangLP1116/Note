@@ -24,15 +24,15 @@
 
 ### List分类下的实现类
 
-> **ArrayList：**是可扩容数组（动态数组），ArrayList不是线程安全的容器，多个线程操作时会发生并发错误，内部基于数组实现，定义如下
+> **ArrayList：**是可扩容数组（动态数组），ArrayList不是线程安全的容器，多个线程操作时会发生并发错误，内部**基于数组实现**，定义如下
 >
 > ![image-20210625101141599](image\image-20210625101141599.png)
 >
-> **Vector：**和ArrayList作用类似，Vector是一个线程安全容器，它对内部的每个方法都粗暴的加锁，因此Vector的内存开销和使用效率与ArrayList相比较差。其内部也是基于数组实现。（Vector和ArrayList基本可以互换）
+> **Vector：**和ArrayList作用类似，Vector是一个线程安全容器，它对内部的每个方法都粗暴的加锁，因此Vector的内存开销和使用效率与ArrayList相比较差。其内部也是**基于数组实现**。（Vector和ArrayList基本可以互换）
 >
-> **LinkedList：**它是一个双向链表的存储结构，这个性质决定了它的所有操作都可以表示双向性，它同样不是线程安全的，需要手动加锁
+> **LinkedList：**它是一个**双向链表的存储结构**，这个性质决定了它的所有操作都可以表示双向性，它同样不是线程安全的，需要手动加锁（jdk1.6之前使用循环链表作为存储结构）
 >
-> **Stack：**堆栈它继承了Vector，是一种线程安全的容器，提供了常用的堆栈方法，如pop和push方法，是否为空empty方法等
+> **Stack：**堆栈它**继承了Vector**，是一种线程安全的容器，提供了常用的堆栈方法，如pop和push方法，是否为空empty方法等
 
 ### 快速失败机制（fast-fail机制）
 
@@ -40,21 +40,72 @@
 
 ### Set分类下的实现类
 
-> **HashSet：**是一类哈希表结构，实际上是HashMap的一个实例，不是线程安全型
+> **HashSet：**底层结构是**哈希表**(基于HashMap实现)，不是线程安全型
 >
-> **TreeSet：**基于TreeMap的NavigableSet实现，TreeSet有一个父接口**SortedSet**，这个接口规定了内部元素的有序性，使用Comparable对元素进行自然排序，或者使用Comparator在创建时对元素提供定制的排序规则，所有TreeSet也具有这类特性。不是一个线程安全型
+> **TreeSet：**基于TreeMap的NavigableSet实现，TreeSet有一个父接口**SortedSet**，这个接口规定了内部元素的有序性，使用Comparable对元素进行自然排序，或者使用Comparator在创建时对元素提供定制的排序规则，所有TreeSet也具有这类特性。不是一个线程安全型（**底层结构为红黑树**）
 >
 > ![image-20210806200349400](image\image-20210806200349400.png)
 >
-> **LinkedHashSet：**是Set接口的Hash和LinkedLisk的实现，与HashSet不同的是它维护着一个贯穿所有条目的双向链表，链表定义了元素插入集合的顺序。不是线程安全型
+> **LinkedHashSet：**是Set接口的Hash和LinkedLisk的实现，与HashSet不同的是它维护着一个贯穿所有条目的双向链表，链表定义了元素插入集合的顺序，元素的插入和取出顺序满足 FIFO。不是线程安全型（**结构为链表和哈希表**）
 >
 > ![image-20210625103629098](image\image-20210625103629098.png)
 
 ### Queue分类下的实现类
 
-> **PriorityQueue：**优先级队列，它的元素会根据自然排序或构造函数时期提供的Comparator来排序。不允许空值。
+> Queue与Deque的区别
+>
+> Queue是单端队列，只能再一端插入元素到另一端删除元素，遵循FIFO规则
+>
+> `Queue` 扩展了 `Collection` 的接口，根据 **因为容量问题而导致操作失败后处理方式的不同** 可以分为两类方法: 一种在操作失败后会抛出异常，另一种则会返回特殊值。
+>
+> | Queue 接口   | 抛出异常  | 返回特殊值 |
+> | ------------ | --------- | ---------- |
+> | 插入队尾     | add(E e)  | offer(E e) |
+> | 删除队首     | remove()  | poll()     |
+> | 查询队首元素 | element() | peek()     |
+>
+> 
+>
+> Deque是双端队列，两端都可以执行元素的插入和删除，可以用来模拟栈
+>
+> `Deque` 扩展了 `Queue` 的接口, 增加了在队首和队尾进行插入和删除的方法，同样根据失败后处理方式的不同分为两类：
+>
+> | `Deque` 接口 | 抛出异常      | 返回特殊值      |
+> | ------------ | ------------- | --------------- |
+> | 插入队首     | addFirst(E e) | offerFirst(E e) |
+> | 插入队尾     | addLast(E e)  | offerLast(E e)  |
+> | 删除队首     | removeFirst() | pollFirst()     |
+> | 删除队尾     | removeLast()  | pollLast()      |
+> | 查询队首元素 | getFirst()    | peekFirst()     |
+> | 查询队尾元素 | getLast()     | peekLast()      |
+>
+> 事实上，`Deque` 还提供有 `push()` 和 `pop()` 等其他方法，可用于模拟栈。
+>
+> Queue接口实现类
+>
+> `PriorityQueue` 是在 JDK1.5 中被引入的, 其与 `Queue` 的区别在于元素出队顺序是与优先级相关的，即总是优先级最高的元素先出队。
+>
+> 这里列举其相关的一些要点：
+>
+> - `PriorityQueue` 利用了二叉堆的数据结构来实现的，底层使用可变长的数组来存储数据
+> - `PriorityQueue` 通过堆元素的上浮和下沉，实现了在 O(logn) 的时间复杂度内插入元素和删除堆顶元素。
+> - `PriorityQueue` 是非线程安全的，且不支持存储 `NULL` 和 `non-comparable` 的对象。
+> - `PriorityQueue` 默认是小顶堆，但可以接收一个 `Comparator` 作为构造参数，从而来自定义元素优先级的先后。
+>
+> `PriorityQueue` 在面试中可能更多的会出现在手撕算法的时候，典型例题包括堆排序、求第K大的数、带权图的遍历等，所以需要会熟练使用才行。
 >
 > ![image-20210625103955672](image\image-20210625103955672.png)
+>
+> Deque接口实现类
+>
+> ArrayDeque与LinkedList
+>
+> - `ArrayDeque` 是基于可变长的数组和双指针来实现，而 `LinkedList` 则通过链表来实现。
+> - `ArrayDeque` 不支持存储 `NULL` 数据，但 `LinkedList` 支持。
+> - `ArrayDeque` 是在 JDK1.6 才被引入的，而`LinkedList` 早在 JDK1.2 时就已经存在。
+> - `ArrayDeque` 插入时可能存在扩容过程, 不过均摊后的插入操作依然为 O(1)。虽然 `LinkedList` 不需要扩容，但是每次插入数据时均需要申请新的堆空间，均摊性能相比更慢。
+>
+> 从性能的角度上，选用 `ArrayDeque` 来实现队列要比 `LinkedList` 更好。此外，`ArrayDeque` 也可以用于实现栈。
 
 ### Map分类下的实现类
 

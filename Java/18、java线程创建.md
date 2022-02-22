@@ -55,7 +55,7 @@
 >import java.util.concurrent.Callable;	// 重写call方法
 > import java.util.concurrent.ExecutionException;
 > import java.util.concurrent.FutureTask;	
-> // Call接口无法直接作为Thread类参数需要借助Fture接口
+> // Call接口无法直接作为Thread类参数需要借助Feture接口
 > 
 > public class t implements Callable<Integer>
 > {
