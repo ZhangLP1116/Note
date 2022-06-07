@@ -155,7 +155,7 @@ CLUSTER GETKEYSINSLOT <slot><count>
 
   ```
   cluster-require-full-coverage 为yes 整个集群都挂掉
-  cluster-require-full-coverage 为no ，那么，该插槽数据全都不能使用，也无法存储。
+  cluster-require-full-coverage 为no，那么，该插槽数据全都不能使用，也无法存储。
   ```
 
   

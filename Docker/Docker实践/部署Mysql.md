@@ -23,7 +23,8 @@ docker.io/library/mysql:8.0
 ### 2、创建并启动容器
 
 ```shell
-[root@VM-16-16-centos ~]# docker run --name mysql -e MYSQL_ROOT_PASSWORD=zlp123 -d -p 3306:3306 -v /mnt/mysql/conf:/etc/mysql/conf.d -v /mnt/mysql/data:/var/lib/mysql mysql:8.0 
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=zlp123 -d -p 3306:3306 -v /mnt/mysql/conf:/etc/mysql/conf.d -v /mnt/mysql/data:/var/lib/mysql mysql:8.0 
+
 4e32226a74b29915ca3772776951bc50dfc4a37192b441c8267457ab163985b6
 
 --name：设置容器名
@@ -48,7 +49,7 @@ docker.io/library/mysql:8.0
 二、修改加密方式
 
 ```mysql
-mysql -uroot -ppassword #登录
+mysql -uroot -p #登录
 
 use mysql; #选择数据库
 # 远程连接请将'localhost'换成'%'
