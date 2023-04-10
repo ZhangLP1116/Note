@@ -149,7 +149,7 @@ git cherry-pick -n 8607f6102c8087be496ff0175d1790f83808c27c^..92fa72277c90017143
 
 ### 查看不同分支提交的区别
 
-![image-20230109135734880](C:\Users\ZLP\AppData\Roaming\Typora\typora-user-images\image-20230109135734880.png)
+![image-20230109135734880](image/image-20230109135734880.png)
 
 #### 双点
 
@@ -184,7 +184,7 @@ $ git log master...experiment
 $ git grep -n gmtime_r
 ```
 
-![image-20230109151521453](C:\Users\ZLP\AppData\Roaming\Typora\typora-user-images\image-20230109151521453.png)
+![image-20230109151521453](image/image-20230109151521453.png)
 
 
 
@@ -235,7 +235,7 @@ https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%A
 
 ### Reset与checkout的区别
 
-![image-20230109160827223](C:\Users\ZLP\AppData\Roaming\Typora\typora-user-images\image-20230109160827223.png)
+![image-20230109160827223](image/image-20230109160827223.png)
 
 ### 还原提交
 
@@ -246,7 +246,7 @@ $ git revert -m 1 HEAD
 
 `-m 1` 标记指出 “mainline” 需要被保留下来的父结点。 当你引入一个合并到 `HEAD`（`git merge topic`），新提交有两个父结点：第一个是 `HEAD`（`C6`），第二个是将要合并入分支的最新提交（`C4`）。 在本例中，我们想要撤消所有由父结点 #2（`C4`）合并引入的修改，同时保留从父结点 #1（`C6`）开始的所有内容。
 
-![image-20230109163951829](C:\Users\ZLP\AppData\Roaming\Typora\typora-user-images\image-20230109163951829.png)
+![image-20230109163951829](image/image-20230109163951829.png)
 
 > 新的提交 `^M` 与 `C6` 有完全一样的内容，所以从这儿开始就像合并从未发生过，==除了“现在还没合并”的提交依然在 `HEAD` 的历史中==。 如果你尝试再次合并 `topic` 到 `master` Git 会感到困惑：
 >
@@ -257,7 +257,7 @@ $ git revert -m 1 HEAD
 >
 > `topic` 中并没有东西不能从 `master` 中追踪到达。 更糟的是，如果你在 `topic` 中增加工作然后再次合并，Git 只会引入被还原的合并 *之后* 的修改。
 >
-> ![image-20230109164200052](C:\Users\ZLP\AppData\Roaming\Typora\typora-user-images\image-20230109164200052.png)
+> ![image-20230109164200052](image/image-20230109164200052.png)
 
 解决这个最好的方式是撤消还原原始的合并，因为现在你想要引入被还原出去的修改，**然后** 创建一个新的合并提交：
 
@@ -267,7 +267,7 @@ $ git revert ^M
 $ git merge topic
 ```
 
-![image-20230109164250726](C:\Users\ZLP\AppData\Roaming\Typora\typora-user-images\image-20230109164250726.png)
+![image-20230109164250726](image/image-20230109164250726.png)
 
 在本例中，`M` 与 `^M` 抵消了。 `^^M` 事实上合并入了 `C3` 与 `C4` 的修改，`C8` 合并了 `C7` 的修改，所以现在 `topic` 已经完全被合并了。
 
