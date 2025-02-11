@@ -205,3 +205,8 @@ docker run -d --name course-app -p 8081:8081 --net course-app-net course:1.0
 
 
 
+
+
+处于同一docker网络下的应用可以通过应用命代替IP地址进行访问
+
+![image-20220620182829511](image/image-20220620182829511.png)

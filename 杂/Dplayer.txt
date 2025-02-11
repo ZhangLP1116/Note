@@ -1,0 +1,56 @@
+播放hls视频流配置
+
+<template>
+<div id="dplayer" style="height: 450px"></div>
+</template>
+
+<script>
+  import Hls from "hls.js";
+  import DPlayer from 'dplayer'
+
+    export default {
+      name: "Dplayer",
+      data(){
+        return {
+          dp:null
+        }
+      },
+      mounted() {
+        this.initPlayer()
+      },
+      methods:{
+          initPlayer(){
+            this.dp = new DPlayer({
+              container: document.getElementById('dplayer'),
+              autoplay: false,
+              theme: '#FADFA3',
+              loop: true,
+              lang: 'zh-cn',
+              screenshot: true,
+              hotkey: true,
+              preload: 'auto',
+              //logo: 'logo.png',
+              volume: 0.7,
+              mutex: true,
+              video: {
+                url: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8',
+                pic: '',
+                type: 'customHls',
+                customType: {
+                  customHls: function (video, player) {
+                    const hls = new Hls();
+                    hls.loadSource(video.src);
+                    hls.attachMedia(video);
+                  },
+                },
+              },
+            });
+          }
+      }
+    }
+</script>
+
+
+<style scoped>
+
+</style>
